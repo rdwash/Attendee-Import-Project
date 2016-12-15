@@ -54,10 +54,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ConsoleAppTests.cs" />
+    <Compile Include="sandbox\DelimeterTypes.cs" />
+    <Compile Include="sandbox\FileService.cs" />
+    <Compile Include="sandbox\FileProcessor.cs" />
+    <Compile Include="sandbox\IFileProcessor.cs" />
+    <Compile Include="sandbox\FileRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\records-commas.txt" />
+    <Content Include="data\records-piped.txt" />
+    <Content Include="data\records-spaced.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
