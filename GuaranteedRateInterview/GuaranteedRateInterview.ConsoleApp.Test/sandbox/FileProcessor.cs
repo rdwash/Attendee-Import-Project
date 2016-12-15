@@ -11,29 +11,29 @@ namespace GuaranteedRateInterview.ConsoleApp.Test.sandbox
     {
         public List<FileRecord> ReadFile(string fileToProcess)
         {
-            List<FileRecord> fileRecords = null;
+            List<FileRecord> fileRecords = new List<FileRecord>();
 
             using (StreamReader reader = new StreamReader(fileToProcess))
             {
                 string record = string.Empty;
                 while ((record = reader.ReadLine()) != null)
                 {
-                    foreach(var delimType in Enum.GetValues(typeof(DelimeterTypes)))
+                    foreach(KeyValuePair<string, char> pair in DelimeterTypes.DelimeterTypesDict)
                     {
-                        if(record.Contains((string)delimType))
+                        if (record.Contains(pair.Value))
                         {
-                            LoadFileData(fileRecords, record, delimType);
+                            LoadFileData(fileRecords, record, pair.Value);
                         }
-                    }                    
+                    }               
                 }
             }
 
             return fileRecords;            
         }
 
-        private static void LoadFileData(List<FileRecord> personRecords, string record, object delimType)
+        private static void LoadFileData(List<FileRecord> personRecords, string record, char delimeter)
         {
-            string[] recordData = record.Split((char)delimType);
+            string[] recordData = record.Split(delimeter);
             FileRecord newPerson = new FileRecord(recordData[0], recordData[1], recordData[2], recordData[3], recordData[4]);
             personRecords.Add(newPerson);
         }

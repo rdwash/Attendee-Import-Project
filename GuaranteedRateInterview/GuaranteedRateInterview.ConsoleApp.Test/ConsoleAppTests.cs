@@ -19,7 +19,8 @@ namespace GuaranteedRateInterview.ConsoleApp.Test
         public void SetUp()
         {
             fileService = new FileService(new FileProcessor());
-            files = Directory.GetFiles("/data/");
+            string dataDirectory = @"..\\..\\data";
+            files = Directory.GetFiles(dataDirectory);
         }
 
         [TearDown]

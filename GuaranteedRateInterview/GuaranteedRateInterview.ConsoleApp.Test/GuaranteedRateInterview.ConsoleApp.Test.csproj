@@ -70,6 +70,7 @@
     <Content Include="data\records-piped.txt" />
     <Content Include="data\records-spaced.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
