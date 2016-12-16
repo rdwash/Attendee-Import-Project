@@ -81,11 +81,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\records-commas.txt" />
+    <Content Include="data\records-piped.txt" />
+    <Content Include="data\records-spaced.txt" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FileDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -102,8 +106,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuaranteedRateInterview.Common\GuaranteedRateInterview.Common.csproj">
+      <Project>{c5ecede8-eb7b-4369-96e4-1232cb436d05}</Project>
+      <Name>GuaranteedRateInterview.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

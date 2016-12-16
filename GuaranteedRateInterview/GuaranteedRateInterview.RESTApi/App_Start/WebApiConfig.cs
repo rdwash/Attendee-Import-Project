@@ -19,6 +19,12 @@ namespace GuaranteedRateInterview.RESTApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "RecordsApi",
+                routeTemplate: "records/{sort}",
+                defaults: new { sort = RouteParameter.Optional }
+            );
         }
     }
 }
