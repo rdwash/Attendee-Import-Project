@@ -23,9 +23,9 @@ namespace GuaranteedRateInterview.Common.Models
             DateOfBirth = DateTime.Parse(dateofbirth);
         }
 
-        public void DisplayInfo()
+        public string DisplayInfo()
         {
-            Console.WriteLine(string.Format("Last Name: {0}, First Name: {1}, Gender: {2}, Favorite Color: {3}, Date of Birth: {4}", LastName, FirstName, Gender, FavoriteColor, DateOfBirth.ToShortDateString()));
+            return string.Format("{0}, {1} --- G: {2} --- FC: {3} --- DOB: {4}", LastName, FirstName, Gender, FavoriteColor, DateOfBirth.ToShortDateString());
         }
     }
 }

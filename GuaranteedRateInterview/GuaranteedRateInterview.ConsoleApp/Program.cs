@@ -24,16 +24,15 @@ namespace GuaranteedRateInterview.ConsoleApp
                 fileService.ProcessFile(f);                               
             }
 
+            Console.WriteLine("\n------------SORTED BY GENDER -------------------------------------\n");
             fileService.SetSortOrder("gender");
             fileService.DisplayFileRecords();
 
-            Console.WriteLine("\n-------------------------------------------------\n");
-
+            Console.WriteLine("\n------------SORTED BY BIRTH DATE -------------------------------------\n");
             fileService.SetSortOrder("birthdate");
             fileService.DisplayFileRecords();
 
-            Console.WriteLine("\n-------------------------------------------------\n");
-
+            Console.WriteLine("\n------------SORTED BY LAST NAME -------------------------------------\n");
             fileService.SetSortOrder("lastname");
             fileService.DisplayFileRecords();
 

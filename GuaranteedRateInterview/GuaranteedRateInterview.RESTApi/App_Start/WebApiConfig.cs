@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace GuaranteedRateInterview.RESTApi
@@ -21,13 +22,7 @@ namespace GuaranteedRateInterview.RESTApi
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
-            );
-
-            config.Routes.MapHttpRoute(
-                name: "RecordsApi",
-                routeTemplate: "records/{sort}",
-                defaults: new { sort = RouteParameter.Optional }
-            );
+            ); 
         }
     }
 }

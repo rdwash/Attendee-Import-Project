@@ -13,6 +13,7 @@ namespace GuaranteedRateInterview.Common.Services
         public FileService(IFileProcessor fileProcessor)
         {
             FileProcessor = fileProcessor;
+            FileRecords = new List<FileRecord>();
         }
 
         public void ProcessFile(string fileToProcess)
@@ -50,7 +51,7 @@ namespace GuaranteedRateInterview.Common.Services
 
             foreach(var record in FileRecords)
             {
-                record.DisplayInfo();
+                Console.WriteLine(record.DisplayInfo());
             }
         }
     }

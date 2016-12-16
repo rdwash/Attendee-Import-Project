@@ -33,7 +33,7 @@ namespace GuaranteedRateInterview.Common.Services
             return fileRecords;            
         }
 
-        private static void LoadFileData(List<FileRecord> fileRecords, string record, char delimeter)
+        public void LoadFileData(List<FileRecord> fileRecords, string record, char delimeter)
         {
             if(fileRecords != null)
             {
