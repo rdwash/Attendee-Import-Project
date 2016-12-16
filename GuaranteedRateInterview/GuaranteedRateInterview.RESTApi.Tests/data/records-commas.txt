@@ -1,0 +1,10 @@
+﻿Morgan,Patrice,Female,Silver,03/17/2001
+Renolds,Miley,Female,Beige,08/16/2004
+Chambers,Brittney,Female,Red,09/22/1979
+Stevens,Jack,Male,White,12/20/1969
+Baines,Andres,Male,Gray,05/12/1996
+Rodgers,Wesley,Male,Red,03/13/1995
+Steele,Connie,Female,Red,08/26/1987
+Berkshire,Anna,Female,Lavender,11/15/1985
+Bailey,Crystal,Female,Tan,02/14/1974
+Parker,Dylan,Male,Orange,06/23/1983

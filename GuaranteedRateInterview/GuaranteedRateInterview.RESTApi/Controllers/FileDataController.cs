@@ -15,12 +15,18 @@ namespace GuaranteedRateInterview.RESTApi.Controllers
 {
     public class FileDataController : ApiController
     {
-        FileService fileService;
-        string[] files;
+        public FileService fileService;
+        public string[] files;
 
         public FileDataController()
         {
             LoadData();
+        }
+
+
+        public FileDataController(string test)
+        {
+
         }
 
         private void LoadData()
