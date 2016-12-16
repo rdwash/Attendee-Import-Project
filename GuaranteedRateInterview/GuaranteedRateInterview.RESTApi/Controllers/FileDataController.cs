@@ -7,6 +7,7 @@ using System.Web.Http;
 using GuaranteedRateInterview.Common.Services;
 using GuaranteedRateInterview.Common.Models;
 using System.IO;
+using System.Web;
 
 namespace GuaranteedRateInterview.RESTApi.Controllers
 {
@@ -17,12 +18,12 @@ namespace GuaranteedRateInterview.RESTApi.Controllers
 
         public FileDataController()
         {
-            string dataDirectory = @"..\\..\\data\";
+            string dataDirectory = "~/data/";
             fileService = new FileService(new FileProcessor());
-            files = Directory.GetFiles(dataDirectory);
+            files = Directory.GetFiles(HttpContext.Current.Server.MapPath(dataDirectory));
         }
 
-        [Route("/records")]
+        [Route("records")]
         public IEnumerable<FileRecord> GetAllRecords()
         {
             foreach(string file in files)
