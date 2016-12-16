@@ -13,29 +13,35 @@ namespace GuaranteedRateInterview.ConsoleApp.Test.sandbox
         {
             List<FileRecord> fileRecords = new List<FileRecord>();
 
-            using (StreamReader reader = new StreamReader(fileToProcess))
+            if(File.Exists(fileToProcess))
             {
-                string record = string.Empty;
-                while ((record = reader.ReadLine()) != null)
+                using (StreamReader reader = new StreamReader(fileToProcess))
                 {
-                    foreach(KeyValuePair<string, char> pair in DelimeterTypes.DelimeterTypesDict)
+                    string record = string.Empty;
+                    while ((record = reader.ReadLine()) != null)
                     {
-                        if (record.Contains(pair.Value))
+                        foreach (KeyValuePair<string, char> pair in DelimeterTypes.DelimeterTypesDict)
                         {
-                            LoadFileData(fileRecords, record, pair.Value);
+                            if (record.Contains(pair.Value))
+                            {
+                                LoadFileData(fileRecords, record, pair.Value);
+                            }
                         }
-                    }               
+                    }
                 }
-            }
+            }            
 
             return fileRecords;            
         }
 
-        private static void LoadFileData(List<FileRecord> personRecords, string record, char delimeter)
+        private static void LoadFileData(List<FileRecord> fileRecords, string record, char delimeter)
         {
-            string[] recordData = record.Split(delimeter);
-            FileRecord newPerson = new FileRecord(recordData[0], recordData[1], recordData[2], recordData[3], recordData[4]);
-            personRecords.Add(newPerson);
+            if(fileRecords != null)
+            {
+                string[] recordData = record.Split(delimeter);
+                FileRecord newFileRecord = new FileRecord(recordData[0], recordData[1], recordData[2], recordData[3], recordData[4]);
+                fileRecords.Add(newFileRecord);
+            }            
         }
     }
 }
