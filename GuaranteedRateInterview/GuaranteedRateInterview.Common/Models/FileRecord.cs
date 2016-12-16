@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuaranteedRateInterview.ConsoleApp.Test.sandbox
+namespace GuaranteedRateInterview.Common.Models
 {
     public class FileRecord
     {

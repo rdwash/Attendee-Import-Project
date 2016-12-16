@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A1FB62E-87F1-4E4F-A88E-79C32034FD78}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{C5ECEDE8-EB7B-4369-96E4-1232CB436D05}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuaranteedRateInterview.ConsoleApp</RootNamespace>
-    <AssemblyName>GuaranteedRateInterview.ConsoleApp</AssemblyName>
+    <RootNamespace>GuaranteedRateInterview.Common</RootNamespace>
+    <AssemblyName>GuaranteedRateInterview.Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,22 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\FileRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="data\records-commas.txt" />
-    <Content Include="data\records-piped.txt" />
-    <Content Include="data\records-spaced.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GuaranteedRateInterview.Common\GuaranteedRateInterview.Common.csproj">
-      <Project>{c5ecede8-eb7b-4369-96e4-1232cb436d05}</Project>
-      <Name>GuaranteedRateInterview.Common</Name>
-    </ProjectReference>
+    <Compile Include="Services\FileProcessor.cs" />
+    <Compile Include="Services\FileService.cs" />
+    <Compile Include="Services\IFileProcessor.cs" />
+    <Compile Include="Types\DelimeterTypes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

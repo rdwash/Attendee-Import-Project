@@ -5,16 +5,16 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using GuaranteedRateInterview.Common.Services;
 
 namespace GuaranteedRateInterview.ConsoleApp
 {
     public class Program
     {
-        public const string dataDirectory = @"..\\..\\data";
+        public const string dataDirectory = @"..\\..\\data\";
 
         static void Main(string[] args)
         {
-            /*
             FileService fileService = new FileService(new FileProcessor());
 
             string[] files = Directory.GetFiles(dataDirectory); 
@@ -38,7 +38,6 @@ namespace GuaranteedRateInterview.ConsoleApp
             fileService.DisplayFileRecords();
 
             Console.ReadKey();
-            */
         }
     }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GuaranteedRateInterview.ConsoleApp.Test.sandbox;
 using NUnit.Framework;
 using FluentAssertions;
+using GuaranteedRateInterview.Common.Services;
+using GuaranteedRateInterview.Common.Models;
 
 namespace GuaranteedRateInterview.ConsoleApp.Test
 {

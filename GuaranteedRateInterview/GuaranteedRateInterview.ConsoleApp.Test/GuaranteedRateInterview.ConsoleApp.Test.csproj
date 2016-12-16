@@ -65,11 +65,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConsoleAppTests.cs" />
-    <Compile Include="sandbox\DelimeterTypes.cs" />
-    <Compile Include="sandbox\FileService.cs" />
-    <Compile Include="sandbox\FileProcessor.cs" />
-    <Compile Include="sandbox\IFileProcessor.cs" />
-    <Compile Include="sandbox\FileRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuaranteedRateInterview.Common\GuaranteedRateInterview.Common.csproj">
+      <Project>{c5ecede8-eb7b-4369-96e4-1232cb436d05}</Project>
+      <Name>GuaranteedRateInterview.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

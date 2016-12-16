@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GuaranteedRateInterview.Common.Types;
+using GuaranteedRateInterview.Common.Models;
 
-namespace GuaranteedRateInterview.ConsoleApp.Test.sandbox
+namespace GuaranteedRateInterview.Common.Services
 {
     public class FileProcessor : IFileProcessor
     {

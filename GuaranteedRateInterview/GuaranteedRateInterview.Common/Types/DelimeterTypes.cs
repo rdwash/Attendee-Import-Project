@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace GuaranteedRateInterview.ConsoleApp.Test.sandbox
+namespace GuaranteedRateInterview.Common.Types
 {
     public static class DelimeterTypes
     {
