@@ -1,4 +1,4 @@
-# GuaranteedRate-Interview
+# Attendee Import
 
 ## Step 1 - Build a system to parse and sort a set of records
 Create a command line app that takes as input a file with a set of records in one of three formats described below, and outputs (to the screen) the set of records sorted in one of three ways.
